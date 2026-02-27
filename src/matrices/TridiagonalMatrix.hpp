@@ -24,6 +24,7 @@ public:
 private:
     void check_size_consistency_() const;
     void check_index_(std::size_t i) const;
+    void check_offdiag_index_(std::size_t i) const;
 
     std::vector<double> a_;
     std::vector<double> b_;

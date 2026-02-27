@@ -1,5 +1,5 @@
 #pragma once
-#include "TridiagonalMatrix.hpp"
+#include "matrices/TridiagonalMatrix.hpp"
 #include <vector>
 
 std::vector<double> solve_tridiagonal_matrix(const TridiagonalMatrix& matrix,
