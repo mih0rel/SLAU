@@ -13,6 +13,7 @@ target_sources(sle_lib PUBLIC
     src/matrices/TridiagonalMatrix.hpp
     src/matrices/Vector.hpp
     src/solvers/GSeidel.hpp
+    src/solvers/GSeidel_plus.hpp
     src/solvers/GaussQR.hpp
     src/solvers/Jacobi.hpp
     src/solvers/Chebyshev.hpp
@@ -40,6 +41,7 @@ if (GTest_FOUND)
     add_sle_test(test_Chebyshev tests/test_Chebyshev.cpp)
     add_sle_test(test_SimpleIterations tests/test_SimpleIterations.cpp)
     add_sle_test(test_GSeidel tests/test_GSeidel.cpp)
+    add_sle_test(test_GSeidel_plus tests/test_GSeidel_plus.cpp)
 else()
     message(STATUS "GTest not found, tests will not be built")
 endif()
