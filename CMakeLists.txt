@@ -10,13 +10,17 @@ target_sources(sle_lib PUBLIC
     src/decompositions/Householder.hpp
     src/matrices/CSR.hpp
     src/matrices/DenseMatrix.hpp
+    src/matrices/EllipticGenerator.hpp
     src/matrices/TridiagonalMatrix.hpp
     src/matrices/Vector.hpp
     src/solvers/GSeidel.hpp
     src/solvers/GSeidel_plus.hpp
     src/solvers/GaussQR.hpp
     src/solvers/Jacobi.hpp
+    src/solvers/CG.hpp
     src/solvers/Chebyshev.hpp
+    src/solvers/Fastest_Grad.hpp
+    src/solvers/SOR.hpp
     src/solvers/SimpleIterations.hpp
     src/solvers/TridiagonalMatrixSolver.hpp
 )
@@ -36,9 +40,13 @@ if (GTest_FOUND)
 
     add_sle_test(test_DenseMatrix tests/test_DenseMatrix.cpp)
     add_sle_test(test_CSR tests/test_CSR.cpp)
+    add_sle_test(test_EllipticGenerator tests/test_EllipticGenerator.cpp)
     add_sle_test(test_TridiagonalMatrixSolver tests/test_TridiagonalMatrixSolver.cpp)
     add_sle_test(test_Jacobi tests/test_Jacobi.cpp)
     add_sle_test(test_Chebyshev tests/test_Chebyshev.cpp)
+    add_sle_test(test_Fastest_Grad tests/test_Fastest_Grad.cpp)
+    add_sle_test(test_CG tests/test_CG.cpp)
+    add_sle_test(test_SOR tests/test_SOR.cpp)
     add_sle_test(test_SimpleIterations tests/test_SimpleIterations.cpp)
     add_sle_test(test_GSeidel tests/test_GSeidel.cpp)
     add_sle_test(test_GSeidel_plus tests/test_GSeidel_plus.cpp)
