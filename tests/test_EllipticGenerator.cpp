@@ -6,7 +6,7 @@ TEST(ELLIPTIC_GENERATOR, TEST_1) {
     auto f = [](double x, double y){return 0.0;};
     auto g = [](double x, double y){return 0.0;};
 
-    auto problem = generate_poisson_dirichlet<double>(1, 1.0, f, g);
+    auto problem = dirichlet<double>(1, 1.0, f, g);
 
     ASSERT_EQ(problem.matrix.get_height(), 1);
     ASSERT_EQ(problem.matrix.get_width(), 1);
@@ -19,7 +19,7 @@ TEST(ELLIPTIC_GENERATOR, TEST_2) {
     auto f = [](double x, double y){return 1.0;};
     auto g = [](double x, double y){return 1.0;};
 
-    auto problem = generate_poisson_dirichlet<double>(2, 1.0, f, g);
+    auto problem = dirichlet<double>(2, 1.0, f, g);
 
     ASSERT_EQ(problem.matrix.get_height(), 4);
     ASSERT_EQ(problem.matrix.get_width(), 4);

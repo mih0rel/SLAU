@@ -1,13 +1,16 @@
 #pragma once
 
 #include "CSR.hpp"
+
 #include <stdexcept>
+
 template<typename T>
 struct Elliptic{
     CSR<T> matrix;
     std::vector<T> rhs;
     T h;
 };
+
 template<typename T, typename F, typename G>
 Elliptic<T> dirichlet(std::size_t n, T L, F f, G g){
     if(n == 0 || L <= 0) throw std::runtime_error("0");

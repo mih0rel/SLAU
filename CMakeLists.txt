@@ -16,6 +16,7 @@ target_sources(sle_lib PUBLIC
     src/solvers/GSeidel.hpp
     src/solvers/GSeidel_plus.hpp
     src/solvers/GaussQR.hpp
+    src/solvers/GMRES.hpp
     src/solvers/Jacobi.hpp
     src/solvers/CG.hpp
     src/solvers/Chebyshev.hpp
@@ -45,6 +46,7 @@ if (GTest_FOUND)
     add_sle_test(test_Jacobi tests/test_Jacobi.cpp)
     add_sle_test(test_Chebyshev tests/test_Chebyshev.cpp)
     add_sle_test(test_Fastest_Grad tests/test_Fastest_Grad.cpp)
+    add_sle_test(test_GMRES tests/test_GMRES.cpp)
     add_sle_test(test_CG tests/test_CG.cpp)
     add_sle_test(test_SOR tests/test_SOR.cpp)
     add_sle_test(test_SimpleIterations tests/test_SimpleIterations.cpp)
